@@ -1,0 +1,130 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2709
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <!DOCTYPE html>\
+<html lang="en">\
+<head>\
+    <meta charset="UTF-8">\
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\
+    <title>Your Photography</title>\
+    <style>\
+        body \{\
+            margin: 0;\
+            font-family: 'Pink Sunset', sans-serif;\
+            background-color: #000;\
+            color: #fff;\
+        \}\
+        header \{\
+            background-color: #333;\
+            padding: 10px;\
+            text-align: center;\
+            font-size: 24px;\
+            color: #ffa500;\
+        \}\
+        nav \{\
+            display: flex;\
+            justify-content: space-around;\
+            background-color: #444;\
+            padding: 10px;\
+        \}\
+        nav a \{\
+            color: #32CD32;\
+            text-decoration: none;\
+            font-weight: bold;\
+        \}\
+        nav a:hover \{\
+            color: #FFD700;\
+        \}\
+        .container \{\
+            padding: 20px;\
+        \}\
+        .home, .about, .cart \{\
+            display: none;\
+        \}\
+        .active \{\
+            display: block;\
+        \}\
+        .gallery \{\
+            display: grid;\
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));\
+            gap: 15px;\
+        \}\
+        .gallery img \{\
+            width: 100%;\
+            height: auto;\
+            border: 2px solid #32CD32;\
+            border-radius: 5px;\
+        \}\
+        .cart-items \{\
+            list-style-type: none;\
+            padding: 0;\
+        \}\
+        .cart-items li \{\
+            border-bottom: 1px solid #fff;\
+            padding: 10px 0;\
+        \}\
+        footer \{\
+            background-color: #333;\
+            padding: 10px;\
+            text-align: center;\
+            color: #fff;\
+            margin-top: 20px;\
+        \}\
+    </style>\
+</head>\
+<body>\
+    <header>Your Photography</header>\
+    <nav>\
+        <a href="#" onclick="showSection('home')">Home</a>\
+        <a href="#" onclick="showSection('about')">About</a>\
+        <a href="#" onclick="showSection('cart')">Cart</a>\
+    </nav>\
+\
+    <div class="container">\
+        <!-- Home Section -->\
+        <div id="home" class="home active">\
+            <h2>Gallery</h2>\
+            <div class="gallery">\
+                <img src="https://via.placeholder.com/200" alt="Sample Photo 1">\
+                <img src="https://via.placeholder.com/200" alt="Sample Photo 2">\
+                <img src="https://via.placeholder.com/200" alt="Sample Photo 3">\
+                <img src="https://via.placeholder.com/200" alt="Sample Photo 4">\
+            </div>\
+        </div>\
+\
+        <!-- About Section -->\
+        <div id="about" class="about">\
+            <h2>About Me</h2>\
+            <p>Hello! I'm a passionate photographer who loves capturing the beauty of the world. My work is a reflection of the stories I see through the lens.</p>\
+        </div>\
+\
+        <!-- Cart Section -->\
+        <div id="cart" class="cart">\
+            <h2>Your Cart</h2>\
+            <ul class="cart-items">\
+                <li>Sample Photo 1 - $50</li>\
+                <li>Sample Photo 2 - $50</li>\
+            </ul>\
+            <button style="background-color: #32CD32; color: #000; padding: 10px; border: none; cursor: pointer;">Proceed to Checkout</button>\
+        </div>\
+    </div>\
+\
+    <footer>\
+        &copy; 2024 Your Photography\
+    </footer>\
+\
+    <script>\
+        function showSection(sectionId) \{\
+            document.querySelectorAll('.container > div').forEach(section => \{\
+                section.classList.remove('active');\
+            \});\
+            document.getElementById(sectionId).classList.add('active');\
+        \}\
+    </script>\
+</body>\
+</html>\
+}
